@@ -1,0 +1,4 @@
+1. py scope
+=> LEGB 규칙을 따릅니다.
+=> local > enclosing > global > built-in
+=> enclosing이란 중첩된 함수구문에서 안쪽에 있는 함수에서 바깥쪽 함수의 변수에 접근할 수 있다는 개념입니다.

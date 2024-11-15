@@ -1,0 +1,7 @@
+1. type() => 어떤 종류의 타입인지 문자열로 반환한다.
+
+2. str(arg) => string 형식으로 바꾼다.
+
+3. float(arg) => float 형식으로 바꾼다.
+
+4. bool(arg) => bool 형식으로 바꾼다.

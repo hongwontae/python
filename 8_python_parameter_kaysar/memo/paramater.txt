@@ -1,0 +1,14 @@
+1. 함수의 파라미터
+=> def functionName(parameter) :
+    ...
+
+
+2. keyword aguments
+2-1. 함수를 호출할 떄 함수의 파라미터를 바인딩하여 정확도를 높이거나 순서 신경쓰지 않아도되는 문법입니다.
+
+2-2. def keywo(a,b,c) :
+        print(a)
+        print(b)
+        print(c)
+
+keywo(b=1, c='ww', a='koala3121')

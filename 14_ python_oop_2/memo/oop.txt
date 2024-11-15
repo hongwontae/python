@@ -1,0 +1,33 @@
+1. 클래스
+1-1. class Classname : => 클래스 생성 코드
+1-2. 클래스를 생성하고 블루프린트들은 들여쓰기가 되어야 합니다.
+1-3. 클래스의 이름은 파스칼케이스를 따릅니다.
+
+
+2. 클래스 생성자 함수
+2-1. class ClassName :
+    def __init__(self,...) :
+=> 이런 방식으로 생성자 함수를 생성할 수 있습니다.
+2-2. self는 만들어질 객체를 의미하고 (js this와 유사) self.속성이름 = 매개변수 or 임의값 => 이런 방식으로
+정의합니다.
+2-3. 생성자 함수의 매개변수를 받아서 초기값을 생성할 수 있고 임의로 생성할 수 도 있습니다.
+=> JS Class의 constructor와 유사합니다.
+2-4. class User : 
+    def __init__(self, id, username) :
+        self.id = id
+        self.username = username
+user = User(1, 'HWT')
+print(user.username) => 'HWT'
+
+
+3. 클래스 메서드
+3-1. 클래스 내부에 def methodName (self,...) : => 메서드 정의할 수 있습니다.
+3-2. self는 만들어질 객체를 target합니다.
+3-3. def test (self, user) : 
+        self.id +=1
+        user.id +=1
+=> 들어온 매개변수는 객체
+
+
+
+        

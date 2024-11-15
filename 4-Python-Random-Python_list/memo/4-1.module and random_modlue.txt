@@ -1,0 +1,11 @@
+1. 모듈
+=> 파이썬에서 제공하는 코드 조각입니다.
+=> import moduleName으로 가져올 수 있습니다.
+=> py에서 제공하는 기본 모듈은 설치 디렉터리의 lib 폴더에 위치합니다.
+
+
+2. random module
+2-1. random.random() : 0.0이상 1.0 미만의 실수를 반환합니다.
+2-2. random.randint(a,b) : a이상 b이하 사이의 정수 난수를 반환합니다.
+2-3. random.uniform(a,b) : a와 b 사이의 실수 난수를 반환합니다.
+2-4. random.shuffle(list) : list의 데이터의 순서를 무작위로 바꿉니다.
