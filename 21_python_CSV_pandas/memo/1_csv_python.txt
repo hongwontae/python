@@ -1,0 +1,2 @@
+1. CSV (Comma Separated Value)
+=> 콤마로 분류된 값을 의미합니다.
