@@ -1,0 +1,24 @@
+1. tkinter layout
+=> tkinter의 컴포넌트를 배치하기 위한 3가지 메서드가 존재합니다.
+=> pack, place, grid
+
+2. pack
+=> 간단히 위치를 조정하는 메서드입니다.
+=> right, left, bottom, top을 통해 위치를 조정합니다.
+=> 간단히 사용하기는 좋지만 구체적인 레이아웃을 잡기 어렵습니다.
+
+3. place
+=> x,y 좌표를 받아서 위치를 조정합니다.
+=> 너무 구체적이기 떄문에 많은 사고가 필요합니다.
+
+4. grid
+=> 열과 행을 기준으로 컴포넌트들을 배치합니다.
+=> pack과 연동하여 사용할 수 없습니다.
+
+
+5. padding
+5-1. window.config(padx=num, pady=num)
+=> tkinter 화면에 여백을 줄 수 있습니다.
+
+5-2. my_button = tkinter.Button(text='...').config(padx=.., pady=...)
+=> 위젯 자체에 여백을 줄 수 있습니다.
