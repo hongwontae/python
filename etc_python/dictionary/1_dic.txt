@@ -1,0 +1,18 @@
+1. dict.keys()
+=> 딕셔너리의 모든 키를 반환합니다.
+
+2. dict.values()
+=> 딕셔너리의 모든 값을 반환합니다.
+
+3. dict.item()
+=> 딕셔너리의 모든 키-값(key,value) 형식의 튜플로 반환합니다.
+
+4. for dictionary 
+for (key, value) in dict.items() :
+    print(key) or print(value)
+=> dictionary key와 value를 반환하는 간단한 for문입니다.
+=> 즉, 딕셔너리_items 객체를 만든 이후에 돌려야 key와 value를 모두 얻을 수 있는 반복문을 실행할 수 있습니다.
+
+for key in dictionary :
+    print(key)
+=> 그냥 돌리면 key만 반환됩니다.

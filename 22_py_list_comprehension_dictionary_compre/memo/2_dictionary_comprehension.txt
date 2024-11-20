@@ -1,0 +1,13 @@
+1. dictionary comprehention
+=> 새로운 딕셔너리를 생성하는 간단한 방법입니다.
+
+1-1. 방식
+1. new_dict = {new_key : new_value for item in list if test}
+=> sequence를 반복하여 item이라는 요소를 통해 딕셔너리의 키나 value에 넣을 수 있습니다.
+=> 또한 test를 통해 조건부로 넣을 수 도 있습니다.
+
+2. new_dict = {new_key : new_value for (key, value) in dict.items() if test}
+* dictionary.items() => 각 키와 값을 튜플로 묶여서 반환됩니다.
+=> 각 딕셔너리 데이터 key, value로 받아서 반복하여 원하는 딕셔너리 형태로 만들 수 있습니다.
+
+
