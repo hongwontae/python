@@ -6,6 +6,7 @@ students_socrs = {
 }
 
 data_frame_student = pandas.DataFrame(students_socrs)
+print(data_frame_student)
 data_list = []
 
 # series

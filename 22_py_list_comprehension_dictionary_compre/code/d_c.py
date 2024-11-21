@@ -1,6 +1,6 @@
-# import random
+import random
 
-# new_names = ['Alex', 'Bath', 'Caroline', 'Dave', 'Eleanor', 'Freddie']
+new_names = ['Alex', 'Bath', 'Caroline', 'Dave', 'Eleanor', 'Freddie']
 
 # student_scores = {student : random.randint(1,100) for student in new_names}
 # print(student_scores)
@@ -11,13 +11,8 @@
 # data_3 = pass_students.keys()
 # print(data_3)
 
-# sentence = "What is the Airspeed Velocity of an Unladen Swallow?"
-# sentence_word = sentence.split(' ')
-# result = {word : len(word) for word in sentence_word}
-# print(result)
-
-# studnet = {'sss' : 10, 'd2' : 20}
-# print(studnet.items())
-# for s in studnet :
-#     print(s)
+sentence = "What is the Airspeed Velocity of an Unladen Swallow?"
+sentence_word = sentence.split(' ')
+result = {word : len(word) for word in sentence_word}
+print(result)
 
