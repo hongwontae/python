@@ -1,0 +1,16 @@
+1. json.dump()
+=> dictionary 데이터를 JSON 데이터로 변환하여 파일에 저장하는 메서드입니다.
+=> json.dump(dic_data, file_object, indent=4)
+=> indent는 여백을 지정하는 것입니다.
+
+
+2. json.load()
+=> json 파일의 데이터를 dictionary로 가져오는 메서드입니다.
+=> json.load(file_object)
+
+
+3. jsonDic.update()
+=> data_data =  json.load(file_object)
+=> data_data.update({name : 'HWT', age : 200})
+=> 즉, 딕셔너리에 update 메서드를 통해 하나의 dictionary 구조체를 만들어서 json의 구조체를 만들기 위해서
+사용합니다.

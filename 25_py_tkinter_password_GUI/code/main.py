@@ -2,6 +2,7 @@ import tkinter
 import tkinter.messagebox
 import random
 import pyperclip
+import json
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 def generate_password () : 
     letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
@@ -27,18 +28,41 @@ def save () :
     email_value = email_username_entry.get()
     password_value = password_entry.get()
 
-    if len(email_value) == 0 or len(password_value) == 0 :
+    new_dic = {
+        web_value : {
+            "email" : email_value,
+            "password" : password_value
+        }
+    }
+
+    if len(email_value) == 0 or len(web_value) == 0 or len(password_value) == 0 :
         tkinter.messagebox.showinfo(title='email password not', message='retry!')
     else :
-        is_ok = tkinter.messagebox.askokcancel(
-        title='email, password check', message=f'{email_value} and {password_value} right?')
+        try :
+            with open('./private_data.json', mode='r') as p_file :
+                existing_data = json.load(p_file)
+        except FileNotFoundError :
+            with open('./private_data.json', mode='w') as p_file :
+                json.dump(new_dic, p_file, indent=4)
+        else :
+            existing_data.update(new_dic)
+            with open('./private_data.json', mode='w') as p_file :
+                json.dump(existing_data, p_file, indent=4)
+        finally :
+            website_entry.delete(0, tkinter.END)
+            password_entry.delete(0, tkinter.END)
 
-        if is_ok :
-            with open('private_data.txt', mode='a') as p_data :
-                p_data.write(f"{web_value} | {email_value} | {password_value}\n")
-                website_entry.delete(0,tkinter.END)
-                password_entry.delete(0,tkinter.END)
-    
+# ----------------Search Function ----------------------#
+def search_handelr () :
+    website_value = website_entry.get()
+
+    with open('./private_data.json') as p_file :
+        all_private_data_dict = json.load(p_file)
+        if website_value in all_private_data_dict :
+            email = all_private_data_dict[website_value]["email"]
+            password = all_private_data_dict[website_value]["password"]
+            tkinter.messagebox.showinfo(title='Your Private Data', message=f'website={website_value} \n email={email} password={password}')
+
 
 
 # ---------------------------- UI SETUP ------------------------------- #
@@ -53,9 +77,11 @@ canvas.grid(column=1, row=0)
 
 website_label = tkinter.Label(text='Website : ')
 website_label.grid(column=0, row=1)
-website_entry = tkinter.Entry(width=35)
+website_entry = tkinter.Entry(width=21)
 website_entry.focus()
-website_entry.grid(row=1, column=1, columnspan=2)
+website_entry.grid(row=1, column=1)
+wensite_button = tkinter.Button(text='Search', width=10, command=search_handelr)
+wensite_button.grid(row=1, column=2)
 
 email_username_label = tkinter.Label(text='Email/Username : ')
 email_username_label.grid(column=0, row=2)
