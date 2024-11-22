@@ -3,3 +3,7 @@
 => after(밀리세컨드, function, *args)
 => *args는 바인딩 함수의 인자가 되어 실행됩니다.
 
+
+2. tkinter.Canvas()
+=> tkinter 화면에 컴포넌트를 덧붙이는 기능입니다.
+=> 주로 사진을 첨부할 떄 사용합니다.
