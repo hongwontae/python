@@ -1,0 +1,6 @@
+1. to_dict() options
+1-1. to_dict('dict') => default
+=> 각 열(column)을 키로 하고, 해당 열의 데이터를 딕셔너리로 변환합니다.
+=> 구조 : {column: {index: value}}
+
+1-2. 

@@ -1,0 +1,60 @@
+1. SMTP (Simple Mail Transfer Protocol)
+1-1. 인터넷을 통해 이메일을 전송하는 규칙을 의미합니다.
+
+1-2. 포트 번호
+1. 25 : 기본 SMTP 포트
+2. 587 : TLS를 사용하는 SMTP 클라이언트 통신용
+3. 465 : SSL 기반의 SMTP 통신용
+
+
+2. SMTP 흐름
+2-1. 사용자가 이메일 작성
+2-2. SMTP 서버에 연결
+2-3. SMTP 서버 간 전달:
+2-4. 수신자에게 이메일 도착
+
+
+3. SMTP 서버 주소
+3-1. 특정 이메일 서비스 제공자의 SMTP 서버를 의미합니다.
+
+3-2. SMTP 서버 주소 표
+Gmail	          smtp.gmail.com	    587 (TLS), 465 (SSL)
+Outlook/Hotmail	  smtp.office365.com	587
+Yahoo Mail	      smtp.mail.yahoo.com	465 (SSL)
+네이버 메일	       smtp.naver.com	     587
+다음 메일	       smtp.daum.net	     465
+
+
+
+4. py에는 smtplib 모듈이 존재합니다.
+=> SMTP을 이용해서 이메일을 제어하는 라이브러리입니다.
+
+
+5. 파이썬을 통해 지메일 계정으로 이메일을 보내기 위한 설정이 존재합니다.
+5-1. 보안 탭에서 2단계 인증을 활성화해야 합니다.
+5-2. 앱 비밀번호를 생성하여 password를 복사합니다.
+5-3. connection.login(password=app_password)로 사용합니다.
+
+
+6. smtplib.SMTP()
+=> 이메일 서버와 연결하는 클래스 호출입니다.
+=> 클래스를 호출할 떄 특정 이메일 서버 주소와 그에 해당하는 포트번호가 필요합니다.
+=> with 메서드와 함꼐 사용하면 close를 명시하지 않아도 됩니다.
+=> with smtplib.SMTP('smtp.gmail.com', 587) as connection :
+
+
+7. connection.starttls()
+=> 이메일을 전송할 떄 암호화해주는 메서드입니다.
+
+8. connection.login(email='', password)
+=> password는 앱 비밀번호입니다.
+
+9. connection.send()
+=> from_addr : 보내는 이메일
+=> to_addr : 받는 이메일
+=> msg : 이메일 내용 (Subject : ...\n\n body)
+
+
+
+
+
