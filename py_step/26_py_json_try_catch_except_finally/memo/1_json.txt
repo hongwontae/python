@@ -3,6 +3,10 @@
 => json.dump(dic_data, file_object, indent=4)
 => indent는 여백을 지정하는 것입니다.
 
+1-1. json.dumps()
+=> dictionary 데이터를 json 데이터 포맷으로 변환시키는 메서드입니다.
+=> 파일 저장을 하지 않고 json 형태로 만드는 것 뿐입니다.
+
 
 2. json.load()
 => json 파일의 데이터를 dictionary로 가져오는 메서드입니다.

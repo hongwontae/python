@@ -11,7 +11,7 @@
 
 
 2. try-except
-2-1. except은 에러 글래스와 함께 사용할 수 있습니다.
+2-1. except은 에러 클래스와 함께 사용할 수 있습니다.
 except FileNotFoundError :
     ...
 except KeyError :
