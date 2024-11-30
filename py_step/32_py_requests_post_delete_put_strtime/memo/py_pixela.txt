@@ -1,0 +1,15 @@
+1. create user
+=> https://pixe.la/v1/users
+=> 여러 매개변수 필요합니다.
+=> 이 떄 username은 소문자로 작성해야 합니다.
+
+2. Graph 생성
+=> 인증 토큰은 http header를 통해 보냅니다.
+=> 필수 매개변수 id/ 그 외 선택
+=> 공식문서의 url를 참고해야 합니다.
+=> https://pixe.la/v1/users/alister/graphs/graph66.html
+=> username과 pixela name를 추가해야 하고 .html를 뒤로 붙입니다.
+
+
+3. graphs post request
+=> 
