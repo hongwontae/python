@@ -1,0 +1,41 @@
+** open을 통해 file을 열었을 때 기본 인코딩 CP949 **
+=> open encoding 파라미터를 통해 utf-8로 설정으로 해결
+
+
+1. BeautifulSoup4 (bs4) 
+=> Python에서 HTML과 XML 문서를 파싱하여 데이터를 추출하고 처리하기 위한 라이브러리입니다.
+=> 웹 스크래핑(web scraping)에서 사용됩니다.
+=> 기본 Python 내장 HTML 파서인 html.parser, 빠르고 유연한 lxml, 더 정교한 파싱을 제공하는 html5lib.
+=> lxml은 따로 설치해야 합니다.
+
+
+2. Beautifulsoup 객체 생성
+=> soup = soup.BeautifulSoup(html_file, 'html.parser') BS4 객체
+=> print(soup.prettify()) => HTML 구조 출력
+
+
+3. 태그 접근
+3-1. soup.tag (title, p, div)
+=> 첫 번쨰로 일치하는 태그를 가져옵니다.
+
+3-2. soup.tag.string or text
+=> 첫 번쨰로 일치하는 태그 내용을 가져옵니다.
+
+3-3. soup.tag.attrs
+=> 첫 번쨰로 일치하는 태그의 속성들을 딕셔너리로 가져옵니다.
+
+
+4. find 메서드
+=> soup.find(id='.link' or class_='description')
+=> 첫 번째로 일치하는 id나 class의 태그들을 가져옵니다.
+
+5. find_all
+=> 일치하는 모든 태그들을 가져옵니다.
+=> list를 반환합니다.
+
+
+5. select 메서드
+=> CSS 셀렉터를 지원하여 복잡한 HTML에서도 데이터를 쉽게 추출할 수 있습니다.
+=> list를 반환합니다.
+
+
