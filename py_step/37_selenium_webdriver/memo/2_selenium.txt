@@ -1,0 +1,20 @@
+1. By +
+1-1. By.LINK_TEXT => a 태그 요소 중 텍스트에 일치하는 요소를 찾습니다.
+1-2. By.PARTIAL_LINK_TEXT => 1-1과 비슷하지만 텍스트의 일부만 일치하면 됩니다.
+=> 1,2 공백과 대소문자 구별합니다.
+
+
+2. driver로 브라우저 접속 후 클릭 동작
+=> selenium 객체를 찾고 반환 값에서 click 메서드를 사용하면 됩니다.
+
+
+3. driver 반환 값.send_keys()
+3-1. 셀리니움 객체를 찾은 뒤 send_keys()를 통해 key에 관한 상호작용을 할 수 있습니다.
+3-2. 일반 문자열을 넣으면 문자열이 입력됩니다.
+3-3. from selenium.webdriver.common.keys import Keys
+=> Keys.enter, Keys.Tab 상수를 사용하여 send_Keys()에 인자로 사용하는 것이 일반적입니다.
+
+
+4. ChromeOptions
+4-1. options.add_argument("window-size=1200,800") : 창 크기로 설정
+
