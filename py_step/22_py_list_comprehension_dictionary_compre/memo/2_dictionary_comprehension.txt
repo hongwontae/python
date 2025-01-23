@@ -7,7 +7,11 @@
 => 또한 test를 통해 조건부로 넣을 수 도 있습니다.
 
 2. new_dict = {new_key : new_value for (key, value) in dict.items() if test}
-* dictionary.items() => 각 키와 값을 튜플로 묶여서 반환됩니다.
+=> for (key, value) or for key, value 이렇게 처리할 수 있습니다.
+* dictionary.items() 
+=> 각 키와 값을 튜플로 묶여서 반환됩니다.
+=> type은 dict_items 객체입니다. [(key1, value1), (key2, value2)]
+
 => 각 딕셔너리 데이터 key, value로 받아서 반복하여 원하는 딕셔너리 형태로 만들 수 있습니다.
 
 

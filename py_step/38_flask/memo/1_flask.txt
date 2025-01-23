@@ -1,0 +1,11 @@
+1. flask
+=> Python Backend Framework입니다.
+
+2. flask 서버를 설정하려면 (power shell)
+=> $env:FLASK_APP = "filename.py" 명령어를 입력합니다.
+=> echo $env:FLASK_APP 명령어로 설정 여부를 확인할 수 있습니다.
+
+3. flask 서버를 시작하려면
+=> flask run
+
+4. flask 서버를 가동시킨 후에 IP 주소로 들어가면 자동으로 생성된 HTML을 볼 수 있습니다.
