@@ -5,3 +5,5 @@
 3. float(arg) => float 형식으로 바꾼다.
 
 4. bool(arg) => bool 형식으로 바꾼다.
+
+5. integer(arg) => integer 형식으로 바꾼다.

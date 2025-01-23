@@ -1,0 +1,88 @@
+1. DataFrame 생성하기
+
+import pandas as pd;
+1-1. 2차원 리스트로 DataFrame 생성하기
+data = [
+    ['Alice', 25, 'Doko'],
+    ['HWT', 28, 'KKD'],
+    ['KkK', 40, 'America']
+]
+df = pd.DataFrame(data, columns = ['Name', 'Age', 'Area'])
+print(df)
+---
+    Name   Age   Area
+0   Alice  25     Doko
+1   HWT    28     KKD
+2   KKK    40     America
+
+
+1-2. 딕셔너리로 DataFrame 생성하기
+
+1. 딕셔너리의 키를 열 이름으로 리스트 값을 데이터로 사용할 떄
+data = {
+    'a' : [1,2,3],
+    'b' : [4,5,6],
+    'c' : [7,8,9]
+}
+df = pd.DataFrame(data)
+print(df)
+---
+    a b c
+0   1 2 3
+1   4 5 6
+2   7 8 9
+
+2. 딕셔너리의 키가 열 이름이 되고 값이 딕셔너리일 떄 키는 인데스 값은 데이터로 사용합니다.
+=> 즉, 상위 키는 열 이름/ 딕셔너리 키는 로우 번호/ 값은 데이터
+data = {
+    'name' : {0 : 'Alice', 1 : 'Bob', 2 : 'koala3121'},
+    'age' : {0 : 10, 1 : 20, 2 : 30},
+    'city' : {0 : 'a', 1 : 'b', 2 : 'c'}
+}
+df = pd.DataFrame(data)
+print(df)
+---
+    name        age  city
+0   Alcie       10     a 
+1   Bob         20     b
+2   koala3121   30     c
+
+
+1-3. CSV 파일로부터 DataFrame 생성하기
+df = pd.read_csv('data.csv');
+print(df)
+=> pandas.read_csv()은 파일을 읽어서 데이터 프레임으로 변환해주는 메서드입니다.
+
+
+1-4. SQL + DataFrame
+df = pd.read_sql_query('select * from table', conn);
+print(df)
+=> sql문을 실행해서 데이터 프레임을 생성하는 메서입니다.
+
+
+1-5. 스칼라 값으로 DataFrame 생성하기
+df = pd.DataFrame(7, index=range(3), columns=['a', 'b', 'c'])
+print(df)
+---
+    A  B  C
+ 0  7  7  7
+ 1  7  7  7
+ 2  7  7  7
+
+
+1-6. Pandas Series를 사용해 DataFrame 생성하기
+data = {
+    'Name' : pd.Series(['HWT', 'Nunez', 'Salah']),
+    'Age' : pd.Series([10, 20, 30]),
+    'City' : pd.Series(['Korea', 'Uruguai', 'Ezypt'])
+}
+print(data)
+---
+      Name  Age     City
+ 0   Alice   25    Seoul
+ 1     Bob   30    Busan
+ 2  Charlie   35  Incheon
+
+
+
+
