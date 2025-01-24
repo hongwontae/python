@@ -1,0 +1,23 @@
+1. 파이썬 데코레이터
+=> 이미 존재하는 함수에 기능을 더하는 함수입니다.
+
+
+2. 예시
+import time;
+def delay_decorator (func) :
+    def wrapper_function () :
+        time.slepp(2)
+        func()
+    return wrapper_function
+
+@delay_decorator
+def say_hello() :
+    print('hello')
+
+say_hello()
+
+=> @delay_decorator가 함수 상단에 존재한다면 해당 함수는 데코레이터 매개변수가 됩니다.
+=> 그리고 delay_decorator의 흐름에 따라 건네준 함수가 흐름대로 실행됩니다.
+
+=> say_hello()에 인자를 넣으면 wrapper_function()의 매개변수에 들어갑니다.
+
