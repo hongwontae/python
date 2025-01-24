@@ -1,0 +1,2 @@
+1. Flask HTML
+=> 데코레이터 함수에서 return 할 떄 HTML 태그를 감싸면 됩니다.

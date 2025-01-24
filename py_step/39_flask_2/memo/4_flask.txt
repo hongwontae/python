@@ -1,0 +1,28 @@
+1. flask를 수정하고 web을 확인하면 수정한 내용이 적용되지 않습니다.
+=> 재시작 해야 합니다.
+
+
+2. if __name__ == '__main__' :
+    app.run(debug=True)
+=> app.run에 debug=True 매개변수를 추가하면 변경사항이 생겼을 떄 자동으로 reload합니다.
+=> 또한 에러가 발생했을 떄 에러가 난 이유를 자세히 설명해주는 docs를 반환합니다.
+
+
+3. @app.route('<name>')
+   def hello (name) :
+        return f"hello {name}"
+=> URL을 파싱하여 hello 인자로 보내서 함수에서 사용할 수 있습니다.
+
+
+4. converer
+=> URL을 지정한 데이터 유형으로 변환하는 기능입니다.
+=> string이 default입니다.
+=> 구문은 <int:number>, <path:name>..
+
+4-1. int => accepts positive integers
+4-2. float => accepts positive floating point values
+4-3. path => like string but also accepts slashes
+(슬래시 이후의 것들도 받아들입니다.)
+4-4. uuid => accepts UUID strings
+
+
