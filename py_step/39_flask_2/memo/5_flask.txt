@@ -1,2 +1,37 @@
 1. Flask HTML
 => 데코레이터 함수에서 return 할 떄 HTML 태그를 감싸면 됩니다.
+
+
+2. 데코레이터 인자
+=> 데코레이터가 붙은 함수를 호출할 떄 인자를 추가하면 해당 인자는 wrapper_function의 인자가 되빈다.
+=> 이 떄 *args(받은 것을 모두 튜플로), **kargs(받은 것을 딕셔너리로) 특수 매개변수를 사용할 수 있습니다.
+
+
+3. 데코레이터 함수 로직 high
+class User :
+    def __init__(self, name):
+        self.name = name
+        self.is_logged_in = False
+
+
+def is_authentication (function) :
+    def wrapper_function (*args) :
+        if args[0].is_logged_in == True :
+            function(args[0])
+    return wrapper_function
+
+
+@is_authentication
+def create_blog (user) :
+    print(f'This is {user.name} new blog post')
+
+new_user = User('HWT')
+new_user.is_logged_in = True
+create_blog(new_user)
+
+3-1. 데코레이터는 함수 정의 시점에 한 번만 실행합니다.
+=> 즉, create_blog = is_authentication(create_blog) 이를 실행합니다.
+
+3-2.데코레이터가 실행되면서 create_blog가 wrapper_function이 됩니다.
+
+3-3. 마지막 라인 create_blog는 wrapper_function이라 생각하고 이를 호출하여 로직을 실행합니다.
