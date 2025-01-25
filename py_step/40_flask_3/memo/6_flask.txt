@@ -1,0 +1,7 @@
+1. render_template()
+=> HTML을 렌더링하는 flask 메서드입니다.
+=> return render_template('test.html')
+=> 이 떄 동일 레벨에 templates 폴더에서 html을 찾기에 주소를 참고할 떄 이를 파악해야 합니다.
+
+=> 정적 파일을 html에 추가할 떄 동일 레벨의 static이라는 폴더에 정적 파일이 존재해야 합니다.
+=> Flask 프레임워크는 정적파일은 static에서 찾기 떄문입니다.
