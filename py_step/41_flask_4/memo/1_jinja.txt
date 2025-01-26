@@ -1,0 +1,12 @@
+1. jinja
+=> Flask 프레임워크를 설치했을 떄 html은 jinja 템플레이팅을 사용할 수 있습니다.
+
+
+2. jinja 사용
+
+2-1. {{}}
+=> python 표현식을 넣을 수 있습니다.
+
+2-2. if/for
+=> {% for in : %} 마무리 할 떄 {% endfor %}
+=> {% if : %} 마무리 할 떄 {% endif %}
