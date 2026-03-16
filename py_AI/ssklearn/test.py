@@ -10,11 +10,12 @@ x = df.iloc[:, :-1].values
 # 백터
 y = df.iloc[:, -1].values
 
-print(x)
-print(y)
+# print(x)
+# print(y)
 
 impute = SimpleImputer(missing_values=np.nan, strategy='mean')
 impute.fit(x)
 x = impute.transform(x)
 
 print(x)
+print(type(x))
