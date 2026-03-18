@@ -28,7 +28,8 @@ le = LabelEncoder()
 y = le.fit_transform(y)
 
 # Data Splitting Train and Test
-x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=1)
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=1, stratify=y)
+
 
 # 특성 스케일링
 sc = StandardScaler()
