@@ -24,12 +24,12 @@ lin_reg2 = LinearRegression()
 lin_reg2.fit(x_poly, y)
 
 # graph Simple Linear Regressor
-# plt.scatter(x,y, color='red')
-# plt.plot(x, lin_reg.predict(x), color='blue')
-# plt.title('Truth or Bluff (Linear Regressor)')
-# plt.xlabel('Position Level')
-# plt.ylabel('Salary')
-# plt.show()
+plt.scatter(x,y, color='red')
+plt.plot(x, lin_reg.predict(x), color='blue')
+plt.title('Truth or Bluff (Linear Regressor)')
+plt.xlabel('Position Level')
+plt.ylabel('Salary')
+plt.show()
 
 # Graph Poly Linear Regressor
 plt.scatter(x,y, color='red')
@@ -38,3 +38,6 @@ plt.title('Truth or Bluff (Poly Regressor)')
 plt.xlabel('Position Level')
 plt.ylabel('Salary')
 plt.show()
+
+print(lin_reg.predict([[6.5]]))
+print(lin_reg2.predict(poly_reg.fit_transform([[6.5]])))
